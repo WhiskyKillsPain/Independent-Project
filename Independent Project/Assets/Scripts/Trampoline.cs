@@ -19,7 +19,6 @@ public class Trampoline : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && _canBounce)
         {
             _canBounce = false;
-            _myAnim.SetTrigger("Bounce");
             Rigidbody2D playerRb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
             playerRb.velocity = new Vector2(playerRb.velocity.x, _bounceForce); 
         }
